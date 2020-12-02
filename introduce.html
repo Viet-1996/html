@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Profile </title>
+	<title>Profile</title>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #666;
+  width: 950px;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 450px;
+  height: 400px;
+  background: #ccc;
+  padding: 20px;
+}
+
+article {
+  float: left;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
 <body>
-	<h1>Full name: Nguyen Hoang Viet</h1>
-	<h1>Date of birth: 20-05-1996</h1>
-	<h1>Class: C2009I</h1>
-	<h1>Address: Truong Dinh, Ha Noi</h1>
+<header>
+	<h1>Nguyen Hoang Viet</h1>
+	<h3>C2009I</h3>
+</header>
+<section>
+	<nav>
+		<h3>Gender: Male</h3>
+		<h3>Phone: 0793169902</h3>
+		<h3>Email: viet.nh.945@aptechlearning.edu.vn</h3>
+		<h3>Address: Ha Noi, Viet Nam</h3>
+		<h3>Hobby: Read light novel, play game</h3>
+	</nav>
+	<article>
+		<img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t31.0-8/10869568_371006149739652_1333177505588583676_o.jpg?_nc_cat=111&ccb=2&_nc_sid=cdbe9c&_nc_ohc=s6ml3ofsIB0AX_2UJgJ&_nc_ht=scontent.fhan2-2.fna&oh=3bda5aa1d55207486ff8f37902f08b13&oe=5FEC8152" width="500" height="400">
+	</article>
+</section>
 </body>
 </html>
