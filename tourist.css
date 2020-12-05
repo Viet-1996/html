@@ -1,0 +1,26 @@
+ .heading {
+ 	text-decoration: underline;
+ 	font-family: Arial;
+ 	font-size: x-large;
+ 	text-transform: capitalize;
+ 	font-variant: small-caps;
+ 	font-weight: bold;
+ }
+
+ .general {
+ 	font-style: italic;
+ 	text-align: justify;
+ }
+
+ .place {
+ 	text-decoration: underline;
+ 	font: cursive;
+ 	size: medium;
+
+ }
+
+ul li{
+	font-size: small;
+	font-family: Verdana;
+	list-style: square;
+}
