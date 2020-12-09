@@ -1,58 +1,80 @@
 body {
-	background-color: #FFFFCC;
+	background-color: rgb(255,255,240);
 }
+textarea{
+	scrollbar-3dlight-color: #C0C0C0;
+	scrollbar-shadow-color: silver;
+	scrollbar-arrow-color: black;
+	scrollbar-face-color: gray;
+	width: 90%;
 
-h2{
-	text-decoration: underline;
 }
-
-#navigation{
+.imgHelp{
+	cursor: pointer;
+	color: blue;
+	background-color: #DDFFEE;
+	right:25%;
 	position: absolute;
-	left: 25%;
-	text-align: center;
 }
 
-#tablesectionOne{
-	table-layout: fixed;
-	text-align: center;
+	
+.EmailEditor{
 	background-color: #FFFFDD;
+	border:solid black 1px;
+}
+#main{
+	width: 400px;
+	background-color: #DDFFEE;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0px auto;
+
+}
+#help{
 	position: absolute;
-	top: 7em;
+	width: 500px;
+	height: 420px;
+	top: 10px;
+	background-color: #cfc
+	padding-left: 10px;
+	padding-right: 10px; 
+	/*display: none;*/
+	border: solid #E4E7E7 2px;
+	color:#303030;
+}
+.Close{
+	text-align: right;
+	color: blue;
+	cursor: pointer;
+}
+ul{
+	list-style-image: url('photos/bullet.jpg');
+	list-style-type: square;
+	list-style-position: inside;
 }
 
-#tablesectionTwo{
-	table-layout: fixed;
-	text-align: center;
-	background-color: #FFFFDD;
-	position: absolute;
-	top: 7em;
+.row{
+	width: 100%;
+	display: flex;
+	margin-bottom: 15px; 
+}
+input{
+	width: :90%;
 }
 
-#tablesectionThree{
-	table-layout: fixed;
-	text-align: center;
-	background-color: #FFFFDD;
-	position: absolute;
-	top: 7em;
+.col-md-4{
+	width:33.33%;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
 }
-
-#tablesectionFour{
-	table-layout: fixed;
-	text-align: center;
-	background-color: #FFFFDD;
-	position: absolute;
-	top: 7em;
+.col-md-8{
+	width: 66.67%;
+	float: left;
+	padding-right: 10px;
 }
-
-.CAPTION{
-	background-color: rgb(266,185,115);
-	font-family: Arial;
-	font-size: 1em;
-}
-
-table, th, td{
-	border: solid;
-	border-width: thin;
-	border-color: #D0D0D0;
-	empty-cells: show;
+button{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 20px;
 }
