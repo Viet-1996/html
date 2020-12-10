@@ -10,10 +10,13 @@ textarea {
 	scrollbar-face-color: gray;
 }
 
-.imgHelp {
+#imgHelp {
 	cursor: help;
-	right:30%;
-	position: absolute;	
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+	float: right;
+	margin-right: 35%;
 }
 
 .EmailEditor{
@@ -21,7 +24,7 @@ textarea {
 }
 
 #main{
-	margin-left: 10%;
+	margin-left: 25%;
 	width: 400px;
 	background-color: #DDFFEE;
 	padding: 10px;
@@ -40,9 +43,14 @@ textarea {
 }
 
 #Close{
-	text-decoration-color: blue;
-	cursor: hand;
-	text-align: left;
+	text-align: right;
+	color: blue;
+	cursor: pointer;
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+	float: right;
+	margin-right: 35%;
 }
 
 ul li{

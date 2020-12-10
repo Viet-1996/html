@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="email.css">
 </head>
 <body>
-	<img src="Help.jpg" class="imgHelp" onclick="clickHelp()">
+	<img src="Help.jpg" id="imgHelp" onclick="clickHelp()">
 	<div id="main">
 		<h2></style>Compose e-mail message.</h2>
 		<table>
@@ -33,7 +33,7 @@
 		</table>
 		<button><a href="status.html">Send</a></button> <button>Cancel</button>
 	</div>
-	<div id="Help">
+	<div id="help">
 		<h2>-:E-mail Editor Help :-</h2>
 			<ul>
 				<li><b>To and Cc:</b><br/>
@@ -46,17 +46,19 @@
 					The <b>Message</b> TextArea allow you to enter the text of your message.
 				</li>
 			</ul>
-	<div class = "Close" onclick="closeHelp()">Close</div>
+	<div id = "Close" onclick="closeHelp()">Close</div>
 	</div>
 	<script>
 	function clickHelp() {
 		document.getElementById("help").style.display = 'block';
-		document.getElementById("main").style.display = 'none;
+		document.getElementById("main").style.display = 'none';
+		document.getElementById('imgHelp').style.display = 'none';
 	}
 
 	function closeHelp() {
 		document.getElementById("help").style.display = 'none';
 		document.getElementById("main").style.display = 'block';
+		document.getElementById('imgHelp').style.display = 'block';
 	}
 	</script>
 </body>
