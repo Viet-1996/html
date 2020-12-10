@@ -28,16 +28,15 @@ textarea {
 }
 
 #help{
-	position: absolute;
 	width: 500px;
 	height: 420px;
 	top: 10px;
 	background-color: #cfc;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 0px 10px;
 	display: none;
-	border: #E4E7E7 , solid, 2px;
-	text-decoration-color: #303030;
+	border: solid #E4E7E7 2px;
+	color: #303030;
+	margin: 0px auto;
 }
 
 #Close{
