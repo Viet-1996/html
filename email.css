@@ -35,7 +35,7 @@ textarea {
 	background-color: #cfc;
 	padding-left: 10px;
 	padding-right: 10px;
-	display: block;
+	display: none;
 	border: #E4E7E7 , solid, 2px;
 	text-decoration-color: #303030;
 }
