@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pt_bac2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = prompt('Mời bạn nhập giá trị a', 0);
+		if (a == 0){
+			alert('Mời bạn nhập a khác 0');
+			var a = prompt('Mời bạn nhập giá trị a', 0);
+		}		
+		var b = prompt('Mời bạn nhập giá trị b', 0);
+		var c = prompt('Mời bạn nhập giá trị c', 0);
+		d = (b * b ) - ( 4 * a * c );
+		e = Math.sqrt(d);
+		if (d < 0){
+			document.write('Pt vô nghiệm')
+		} else if (d == 0) {
+			x = - (b / (2 * a));
+			document.write('Pt có 1 nghiệm x = ');
+			document.write(x);
+		} else {
+			y = (-b + e) / (2 *a);
+			z = (-b - e) / (2 *a);
+			document.write('Pt có 2 nghiệm x1 = ')
+			document.write(y)
+			document.write(' , x2 = ')
+			document.write(z)
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giải Phương Trình Bậc 1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		header {
+			width: 100%;
+			display: flex;
+			background-color: blue;
+			color: white;
+			margin: 0px;
+			padding: 0px 10px;
+		}
+		main{
+			margin: 10px;
+		}
+		button{
+			background-color: green;
+			color: white;
+			padding: 5px 10px;
+			display: inline-block;
+			border-radius: 6px;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<p>Giải Phương Trình Bậc 1</p>
+	</header>
+	<main>
+		<button onclick="a()">Nhập Giá Trị A</button>
+		<button onclick="b()">Nhập Giá Trị B</button>
+		<button onclick="result()">In Kết Quả</button>
+	</main>
+	<script type="text/javascript">
+		function a() {
+			alert (a = prompt("Mời nhập A"))
+			if (a == 0){
+			alert('Mời bạn nhập A khác 0');
+			alert (a = prompt("Mời nhập A"));
+		}	
+		}
+		function b() {
+			alert (b = prompt("Mời nhập B"))
+		}
+		function result() {
+			c = (-b) / a;
+			document.write('x = ')
+			document.write(c)
+		}
+	</script>
+</body>
+</html>
