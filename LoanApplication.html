@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			.header{
+				background-color: #ebbfbc;
+				border: solid 1px red;
+				width: 98%;
+				padding: 0px 15px;
+			}
+			table{
+				border-color: #ebbfbc;
+				width: 100%;
+				background-color: #ebbfbc;
+			}
+			fieldset{
+				border-color: brown;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+<body>
+	<form>
+		<h3 class="header">Loan Application Form</h3>
+		<br><br>
+		<main>
+			<fieldset>
+				<legend><b>Applicant's Personal Information</b></legend>
+				<table>
+					<tr>
+						<td width="17%">Full Name:</td>
+						<td><input type="" required="true" style="width: 70%"></td>
+					</tr>
+					<tr>
+						<td>Date of Birth (MM/dd/yyyy):</td>
+						<td><input type="Date" required="true"></td>
+					</tr>
+					<tr>
+						<td>Phone Number:</td>
+						<td><input type="tel" required="true" pattern="[0-9]{10,}"></td>
+					</tr>
+					<tr>
+						<td>Address:</td>
+						<td><input type="" required="true" style="width: 70%"></td>
+					</tr>
+					<tr>
+						<td>Zip Code:</td>
+						<td><input type="Number" required="true" style="width: 13%" placeholder="xxx-xxxx-xxx"></td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend><b>Applicant's Employment Information</b></legend>
+				<table>
+					<tr>
+						<td width="17%">Curent Employer:</td>
+						<td><input type="" required="true" style="width: 70%"></td>
+					</tr>
+					<tr>
+						<td>Employer Address:</td>
+						<td><input type="" required="true" style="width: 70%"></td>
+					</tr>
+					<tr>
+						<td>Date of Joining(MM/dd/yyyy):</td>
+						<td><input type="Date" required="true"></td>
+					</tr>
+					<tr>
+						<td>Phone Number:</td>
+						<td><input type="tel" required="true" pattern="[0-9]{10,}"></td>
+					</tr>
+					<tr>
+						<td>Email ID:</td>
+						<td><input type="Email" required="true" style="width: 30%"></td>
+					</tr>
+					<tr>
+						<td>Fax:</td>
+						<td><input type="Number" required="true" placeholder="xxx-xxxxxxx"></td>
+					</tr>
+					<tr>
+						<td>Designation:</td>
+						<td><input type="" required="true" style="width: 30%"></td>
+					</tr>
+					<tr>
+						<td>Annual Income ($):</td>
+						<td><input type="Number" required="true" min="0" style="width: 13%"></td>
+					</tr>
+				</table>
+			</fieldset>
+					<fieldset>
+				<legend><b>Loan Information</b></legend>
+				<table>
+					<tr>
+						<td width="17%">Loan Type:</td>
+						<td>
+							<select>
+								<option>Select</option>
+								<option>Personal Loan</option>
+								<option>Home Loan</option>
+								<option>Vehicle Loan</option>
+								<option>Business Loan</option>
+								<option>Education Loan</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Principal ($):</td>
+						<td><input type="Number" required="true" min="0" style="width: 13%"></td>
+					</tr>
+					<tr>
+						<td>Period (Month):</td>
+						<td><input type="Number" required="true" min="0" style="width: 13%"></td>
+					</tr>
+					<tr>
+						<td>Interest ($):</td>
+						<td><input type="Number" required="true" min="0" style="width: 13%"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button type="Submit">Submit</button>
+							<button type="Reset">Reset</button>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</main>
+	</form>
+</body>
+</html>

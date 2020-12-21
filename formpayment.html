@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Payment</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background-color: #c5fcee;
+		}
+		header{
+			display: inline-flex;
+			background-color: #c5e8fc;
+			color: #1083c4;
+			border-style: solid;
+			border-width: 1px;
+			border-color: black;
+			padding: 5px;
+			font-size: 25px;
+		}
+		main{
+			padding: 40px 5px;
+			color: #1083c4;
+		}
+		table{
+			border-color: #00b3ff;
+			background-color: white;
+			color: black;
+			width: 550px;
+		}
+		textarea{
+			height: 50px;
+		}
+		input:focus{
+			background-color: yellow;
+		}
+		select:focus{
+			background-color: yellow;
+		}
+		textarea:focus{
+			background-color: yellow;
+		}
+		footer{
+			padding: 5px;
+		}
+		fieldset{
+			border-color: #95b7ed;
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+	<form><center><header>
+		Purchase Order Form
+	</header>
+	<main>
+		<fieldset>
+			<legend><b> Product Information</b></legend>
+			<table border="1" cellpadding ="3" cellspacing="3" width="30%">
+				<tr>
+					<td width="27%">Product:</td>
+					<td width="73%">
+						<select id="ProductList" required="true" onchange="changePrice();updateTotalPrice()">
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Unit Price ($):</td>
+					<td><input type="" disabled="" id="Price" value="0"></td>
+				</tr>
+				<tr>
+					<td>Quantity:</td>
+					<td><input type="Number" id="quantity" required="true" disabled="true" value="0" min="0" onchange="updateTotalPrice()"></td>
+				</tr>
+				<tr>
+					<td>Total Price ($):</td>
+					<td><input type="" name="" disabled="" value="0" id="TotalPrice"></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br><br><br>
+		<fieldset>
+			<legend>
+				<b>Shipping Information</b>
+			</legend>
+				<table border="1" cellpadding ="3" cellspacing="3" width="30%">
+				<tr>
+					<td width="27%">Full Name:</td>
+					<td width="73%"><input type="" name="" disabled="true" id="name" required="true"></td>
+				</tr>
+				<tr>
+					<td>Shipping Address:</td>
+					<td><textarea disabled="true" id="address" required="true"></textarea></td>
+				</tr>
+				<tr>
+					<td>Credit Card:</td>
+					<td>
+						<select id="card" onchange="updateCard()" required="true">
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Credit Card Number:</td>
+					<td><input type="Number" style="width: 80px" required="true" disabled="true" id="CC1" min="0" max="9999">
+						<input type="Number" style="width: 80px" required="true" disabled="true" id="CC2" min="0" max="9999">
+						<input type="Number" style="width: 80px" required="true" disabled="true" id="CC3" min="0" max="9999">
+						<input type="Number" style="width: 80px" required="true" disabled="true" id="CC4" min="0" max="9999"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</main>
+	<footer>
+		<button type="Submit">Submit</button>
+		<button type="Reset">Reset</button>
+	</footer></center>
+</form>
+	<script type="text/javascript">
+		var ProductList = {
+			"Comfort Sleeper": "650",
+			"Morgan Kids Bed": "975",
+			"Entertainment Cabinet": "480"
+		}
+
+		var ProductTag = document.getElementById('ProductList');
+		ProductTag.innerHTML = '<option value="">Select</option>';
+        for(var key in ProductList) {
+            ProductTag.innerHTML += `<option value="${key}">${key}</option>`
+        }
+
+        function changePrice() {
+            price = ProductList[ProductTag.value]
+            if(price != null && price.length > 0) {
+            	document.getElementById('Price').value = price
+            	document.getElementById('quantity').disabled = false          
+            } else{
+            	document.getElementById('quantity').disabled = true
+            	document.getElementById('Price').value = 0
+            }
+        }
+
+        function updateTotalPrice() {
+        	var quantity = document.getElementById('quantity').value
+        	TotalPrice = quantity * price;
+        	document.getElementById('TotalPrice').value = TotalPrice;
+        }
+
+        var CardList = {
+        	"Visa": "650",
+        	"Master Card": "975",
+        	"American Express": "480"
+        }
+
+        var CardTag = document.getElementById('card');
+		CardTag.innerHTML = '<option value="">Select</option>';
+        for(var key in CardList) {
+            CardTag.innerHTML += `<option value="${key}">${key}</option>`
+        }
+
+        function updateCard() {
+        	CC = CardList[CardTag.value]
+        	if (CC != null && CC.length > 0){
+        		document.getElementById('CC1').disabled = false
+        		document.getElementById('CC2').disabled = false
+        		document.getElementById('CC3').disabled = false
+        		document.getElementById('CC4').disabled = false
+        		document.getElementById('name').disabled = false
+        		document.getElementById('address').disabled = false
+        	} else {
+        		document.getElementById('CC1').disabled = true
+        		document.getElementById('CC2').disabled = true
+        		document.getElementById('CC3').disabled = true
+        		document.getElementById('CC4').disabled = true
+        		document.getElementById('name').disabled = true
+        		document.getElementById('address').disabled = true
+        	}
+        }
+	</script>
+</body>
+</html>
