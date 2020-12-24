@@ -1,0 +1,129 @@
+header{
+            background-color: #dbdbdb;
+            width: 100%;
+        }
+        header p{
+            font-family: 'roboto', sans-serif;
+            margin: 0;
+        }
+        header img{
+            margin: 30px 0px;
+        }
+        .row{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            margin-top: 20px;
+        }
+        .col{
+            width: 30%;
+            display: block;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            margin: 0px 15px 50px 15px;
+        }
+        .col p.a{
+            font-family: 'roboto', sans-serif;
+            font-weight: 400;
+            padding: 0px;
+        }
+        .col p.b{
+            font-family: 'roboto', sans-serif;
+            font-weight: 900;
+            padding-top: 10px;
+            font-size: 25px;
+        }
+        .col p.c{
+            font-family: 'roboto', sans-serif;
+            color: gray;
+            padding-top: 5px;
+        }
+        .linespace{
+            width: 100px;
+            height: 2px;
+            margin: 10px;
+        }
+        .col p.d{
+            float: right;
+            margin-right: 15px;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            padding: 2px 7px;
+        }
+        .col button{
+            color: white;
+            background-color: red;
+            width: 90%;
+            height: 50px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-weight: 900;
+        }
+        .col button:hover{
+            background-color: brown;
+            cursor: pointer;
+        }
+        .col img:hover{
+            cursor: pointer;
+        }
+        .col form{
+            background-color: #dbdbdb;
+            margin: 0px 15px;
+            border-radius: 10px
+        }
+        main{
+            background-color: white;
+        }
+        main table{
+            background-color: #dbdbdb;
+            width: 90%;
+            margin: 50px auto;
+            padding: 30px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+        td.text{
+            color: #ffb514;
+            font-size: 20px;
+        }
+        .box1{
+            width: 90%;
+            display: inherit;
+            font-family: 'roboto', sans-serif;
+            margin: auto;
+            padding-left: 50px;
+        }
+        .box2{
+            background-color: #dbdbdb;
+            width: 85%;
+            margin: 0px auto;
+            padding: 20px;
+            display: block;
+        }
+        .bang1{
+            text-align: left;
+            background-color: white;
+            padding: 10px;
+        }
+        .bang2{
+            text-align: left;
+            background-color: white;
+            padding: 10px;
+        }
+        .box3{
+            width: 85%;
+            margin: 50px auto;
+            padding: 40px;
+        }
+        .box4{
+            background-color: #dbdbdb;
+            width: 83%;
+            margin: auto;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        .box5{
+            width: 85%;
+            margin: 0px auto;
