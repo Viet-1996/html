@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	button{
+  		border-radius: 5px;
+  	}
+  	label{
+  		margin: 30px 20px 0px 40px;
+  		color: #000066;
+  	}
+  	img{
+  		float: left;
+  	}
+  	input{
+  		width: 200px;
+  	}
+  	.container{
+  		font-family: arial;
+  	}
+  </style>
+</head>
+<body>
+	<div class="container" style="background-color: #FFFFCC;width: 600px">
+		<h4 style="color: #0000CC; text-transform: uppercase;padding-top: 10px"><b>Đăng nhập hệ thống</b></h4>
+		<img src="login.png">
+		<form id="form">
+		<div class="form-group">
+			<label for="username"><b>Tài khoản</b></label>
+			<input type="text" id="username" name="username" required>
+		</div>
+		<div class="form-group">
+			<label for="pwd" style="padding-left: 5px"><b>Mật khẩu</b></label>
+			<input type="password" id="pwd" name="pswd" required>
+		</div>
+			<button type="submit" style="margin: 10px 15px 20px 260px" id="submit">Đăng nhập</button>
+			<button type="reset">Nhập lại</button>
+		</form>
+	</div>
+	<script type="text/javascript">
+		$('#form').submit(function() {
+			alert('Đăng nhập thành công');-
+		})
+	</script>
+</body>
+</html>

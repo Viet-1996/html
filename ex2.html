@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	button{
+      background-color: #CCCCCC;
+      border-style: solid;
+      border-color: black;
+      border-width: 1px;
+  	}
+  	label{
+  		margin: 0px 20px 0px 40px;
+  		color: #000066;
+  	}
+  	img{
+  		float: left;
+  	}
+  	input{
+  		width: 200px;
+  	}
+  	.container{
+  		font-family: arial;
+  	}
+  </style>
+</head>
+<body>
+	<div class="container" style="background-color: #FFFFCC;width: 1000px">
+    <img src="regis.png" class="float-left" style="padding-left: 20px">
+		<h4 style="color: #0000CC;padding:50px 160px;"><b>Phiếu mượn sách</b></h4>
+		<form id="form">
+		<div class="form-group">
+			<label for="id"><b>Mã sinh viên</b></label>
+			<input type="text" required>
+		</div>
+		<div class="form-group">
+			<label for="username" style="padding-left: 24px"><b>Họ và tên</b></label>
+			<input type="text" required>
+		</div>
+    <div class="form-group">
+      <label for="booktype" style="padding-left: 23px"><b>Loại sách</b></label>
+      <select>
+        <option>~~ Chọn loại sách ~~</option>
+        <option>Loại 1</option>
+        <option>Loại 2</option>
+        <option>Loại 3</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="bookname" style="padding-left: 25px"><b>Tên sách</b></label>
+      <input type="text" required style="width: 600px">
+    </div>
+    <div class="form-group">
+      <label for="borrowdate" style="padding-left: 5px"><b>Ngày mượn</b></label>
+      <input type="date" required>
+    </div>
+    <div class="form-group">
+      <label for="expireddate" style="padding-left: 32px"><b>Ngày trả</b></label>
+      <input type="date" required>
+    </div>
+			<button type="submit" style="margin: 10px 15px 20px 200px" id="submit"><img src="log_in.png"><b>Đăng kí</b></button>
+			<button type="reset"><img src="cancel.png"><b>Nhập lại</b></button>
+		</form>
+	</div>
+</body>
+</html>
