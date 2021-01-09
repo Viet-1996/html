@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+		<form class="form-inline" action="/action_page.php">
+		    <input class="form-control mr-sm-2" type="text" placeholder="Nhập mã code hoặc tên hàng hóa" style="width: 400px">
+		</form>
+		<ul class="navbar-nav">
+			<li class="nav-item" style="padding-left: 150px">
+				<a class="nav-link" href="#">Báo cáo</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Quản lý</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Nhập mã</a>
+			</li>
+			<li class="nav-item" style="padding-left: 150px">
+				<a class="nav-link" href="#">Cửa hàng</a>
+			</li>
+			<li class="nav-item dropdown">
+				<select style="height: 40px;width: 80px">
+					<option>Kho 1</option>
+					<option>Kho 2</option>
+					<option>Kho 3</option>
+				</select>
+			</li>
+		</ul>
+	</nav>
+	<div class="container" style="margin-top: 15px">
+		<div class="row">
+			<div class="col-md-5">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<th>STT</th>
+						<th>Hàng hóa</th>
+						<th>Số lượng</th>
+						<th>Đơn giá</th>
+						<th>Thành tiền</th>
+					</thead>
+					<tbody id="itemlist">
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-7">
+				<div class="row" id="item">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var datalist = [
+			{
+				'thumbnail': 'https://cf.shopee.vn/file/d3d6f27485cc1f16806a1c85495bb7e2_tn',
+				'title': 'Milo',
+				'price': '37000'
+			}, {
+				'thumbnail': 'https://cf.shopee.vn/file/7098232a55ecea9a3a85392ea25e8bff_tn',
+				'title': 'Nescafe Caramen',
+				'price': '60000'
+			}, {
+				'thumbnail': 'https://cf.shopee.vn/file/824334ca099a82694a76bd0d759e4900',
+				'title': 'Trà Hoa Cúc',
+				'price': '3900'
+			}, {
+				'thumbnail': 'https://cf.shopee.vn/file/9bf107352e3cf54b7435edaa43e36d6b',
+				'title': 'Lương Khô',
+				'price': '1650'
+			}, {
+				'thumbnail': 'https://cf.shopee.vn/file/824334ca099a82694a76bd0d759e4900',
+				'title': 'Gạo sạch',
+				'price': '21900'
+			}, {
+				'thumbnail': 'https://cf.shopee.vn/file/9bf107352e3cf54b7435edaa43e36d6b',
+				'title': 'Bột Cacao',
+				'price': '25000'
+			}, {
+				'thumbnail': 'https://cf.shopee.vn/file/a5434671bf7e593ab0947331037c87c5_tn',
+				'title': 'Thùng 30 Gói Hảo Hảo',
+				'price': '96000'
+			}, {
+				'thumbnail': 'https://cf.shopee.vn/file/d96de64da91bfe71e5e00da230ec111d_tn',
+				'title': 'Dầu Đậu Nành Simply 5L',
+				'price': '205000'
+			}
+		]
+		itemlist=[]
+		$(function() {
+			loadData()
+		})
+		function loadData() {
+			for (var i = 0; i < datalist.length; i++) {
+				$('#item').append(`<div class="col-md-3" onclick="clickitem(${i})" style="cursor: pointer">
+						<img src="${datalist[i].thumbnail}" width="100%">
+						<p style="text-align: center;">${datalist[i].title}</p>
+						<p style="text-align: center;">${datalist[i].price} VND</p>
+					</div>`)
+			}
+		}
+		function clickitem(index) {
+			if(itemlist[index] === undefined) {
+				itemlist[index] = {
+					'thumbnail': datalist[index].thumbnail,
+					'title': datalist[index].title,
+					'price': datalist[index].price,
+					'number': 1
+				}
+			} else {
+				itemlist[index].number++
+			}
+			$('#itemlist').empty()
+			count = 0
+			for (var i = 0; i < itemlist.length; i++) {
+				p = itemlist[i]
+				if(p === undefined) continue;
+				$('#itemlist').append(`<tr>
+							<td>${++count}</td>
+							<td>${p.title}</td>
+							<td>${p.number}</td>
+							<td>${p.price}</td>
+							<td>${p.price * p.number}</td>
+						</tr>`)
+			}
+		}
+	</script>
+</body>
+</html>
